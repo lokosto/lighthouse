@@ -237,12 +237,8 @@ export class PerformanceCategoryRenderer extends CategoryRenderer {
       // Performance diagnostics should only have score display modes of "informative" and "metricSavings"
       // If the score display mode is "metricSavings", the `score` will be a coarse approximation of the overall impact.
       // Therefore, it makes sense to sort audits by score first to ensure visual clarity with the score icons.
-      const scoreA = a.auditRef.result.scoreDisplayMode === 'informative'
-        ? 100
-        : Number(a.auditRef.result.score);
-      const scoreB = b.auditRef.result.scoreDisplayMode === 'informative'
-        ? 100
-        : Number(b.auditRef.result.score);
+      const scoreA = a.auditRef.result.score || 0;
+      const scoreB = b.auditRef.result.score || 0;
       if (scoreA !== scoreB) return scoreA - scoreB;
 
       // Overall impact is the estimated improvement to the performance score
