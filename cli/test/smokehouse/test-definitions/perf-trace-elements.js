@@ -171,7 +171,7 @@ const expectations = {
         },
       },
       'layout-shift-elements': {
-        score: null,
+        score: 1,
         displayValue: '2 elements found',
         details: {
           items: [
@@ -210,7 +210,7 @@ const expectations = {
         },
       },
       'long-tasks': {
-        score: null,
+        score: 1,
         details: {
           items: {
             0: {

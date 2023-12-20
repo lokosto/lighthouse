@@ -447,7 +447,7 @@ const expectations = {
         },
       },
       'dom-size': {
-        score: null,
+        score: 1,
         numericValue: 154,
         details: {
           items: [
